@@ -29,11 +29,11 @@
             position: relative;
             width: 100%;
             margin: 0 auto;
-            height: 320px;
+            height: 350px;
         }
         
         @media (max-width: 768px) {
-            .chart-container { height: 280px; }
+            .chart-container { height: 300px; }
         }
 
         .rebound-gradient {
@@ -69,21 +69,21 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Textual Commentary -->
-                <div class="lg:col-span-1 space-y-4 text-slate-700">
+                <div class="lg:col-span-1 space-y-4 text-slate-700 text-sm">
                     <p class="leading-relaxed">
-                        แม้ตลาดหุ้นยุโรปจะปรับตัว Sideway <span class="font-bold text-navy-bg"> แต่กลุ่มสินค้าหรูและอุตสาหกรรม</span> โดยดัชนี CAC 40 ของฝรั่งเศสโดดเด่นเป็นพิเศษ 
+                        แม้ตลาดหุ้นยุโรปจะปรับตัว Sideway <span class="font-bold text-navy-bg">แต่กลุ่มสินค้าหรูและอุตสาหกรรม</span> กลับโดดเด่น โดยเฉพาะดัชนี CAC 40 ของฝรั่งเศส
                     </p>
                     <p class="leading-relaxed">
-                        จากการวิเคราะห์ข้อมูลรายกลุ่มอุตสาหกรรม จะเห็นว่ากลุ่ม <span class="font-bold underline">Consumer Discretionary</span> (สินค้าฟุ่มเฟือย) และ <span class="font-bold underline">Health Care</span> (สุขภาพ) เป็นกลุ่มที่นำตลาดในรอบนี้ 
+                        จากการวิเคราะห์พบว่ากลุ่ม <span class="font-bold underline">Consumer Discretionary</span> และ <span class="font-bold underline">Health Care</span> เป็นกลุ่มที่นำตลาดในรอบนี้ (Outperform) 
                     </p>
-                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500 text-sm">
-                        <span class="font-bold">Key Insight:</span> ความสัมพันธ์ทางการค้า EU-China ที่ดีขึ้น หลังมีการยกเว้นภาษีนำเข้า EVs บางส่วน เป็นแรงหนุนสำคัญให้กับบริษัทส่งออกในยุโรป
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                        <span class="font-bold">Key Insight:</span> ท่าทีประนีประนอมทางการค้า EU-China เรื่องภาษีรถยนต์ไฟฟ้า (EVs) และผลิตภัณฑ์นม ช่วยลดความกังวลเรื่องสงครามการค้า
                     </div>
                 </div>
 
                 <!-- Sector Performance Chart -->
                 <div class="lg:col-span-2 premium-card p-6 rounded-xl shadow-sm">
-                    <h3 class="font-bold mb-4 text-slate-500 uppercase text-xs tracking-widest">Eurostoxx 600 Sector Performance (%)</h3>
+                    <h3 class="font-bold mb-4 text-slate-500 uppercase text-xs tracking-widest">Eurostoxx 600 Daily Sector Performance (%)</h3>
                     <div class="chart-container">
                         <canvas id="sectorChart"></canvas>
                     </div>
@@ -97,46 +97,41 @@
                 <span>หุ้นที่โดดเด่นและปัจจัยขับเคลื่อน</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <!-- Kering -->
                 <div class="premium-card p-5 rounded-lg border-t-4 border-emerald-600">
                     <h4 class="font-bold text-lg mb-1">Kering (Gucci)</h4>
                     <p class="text-xs text-slate-400 mb-3">Consumer Discretionary</p>
-                    <p class="text-sm text-slate-600">พุ่งขึ้นจากยอดขายที่ดีกว่าที่นักวิเคราะห์ประเมินไว้ โดยเฉพาะการฟื้นตัวของแบรนด์หลัก</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">ราคาหุ้นพุ่งจากยอดขายที่ดีกว่าคาด แม้จะมีการปรับโครงสร้างแบรนด์ แต่สัญญาณในเอเชียฟื้นตัวชัดเจน</p>
                 </div>
-                <!-- EssilorLuxottica -->
                 <div class="premium-card p-5 rounded-lg border-t-4 border-emerald-600">
                     <h4 class="font-bold text-lg mb-1">EssilorLuxottica</h4>
                     <p class="text-xs text-slate-400 mb-3">Health Care / Luxury</p>
-                    <p class="text-sm text-slate-600">ได้รับอานิสงส์อย่างมากจากยอดขาย <span class="font-bold">แว่นตา AI</span> ที่กำลังเป็นกระแสไปทั่วโลก</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">ได้รับอานิสงส์มหาศาลจากยอดขาย <span class="font-bold">แว่นตา AI</span> ที่ผสานแฟชั่นเข้ากับเทคโนโลยีได้อย่างลงตัว</p>
                 </div>
-                <!-- Hermes -->
                 <div class="premium-card p-5 rounded-lg border-t-4 border-emerald-600">
                     <h4 class="font-bold text-lg mb-1">Hermes</h4>
                     <p class="text-xs text-slate-400 mb-3">Luxury Goods</p>
-                    <p class="text-sm text-slate-600">ยอดขายยังคงแข็งแกร่งเกินคาด โดยเฉพาะกระเป๋า Birkin ที่ความต้องการไม่ลดลงเลย</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">ยอดขาย Birkin ยังคงเป็น Iconic ที่มีความต้องการสูง ช่วยพยุง Sentiment กลุ่ม Luxury ทั้งหมด</p>
                 </div>
-                <!-- Siemens -->
                 <div class="premium-card p-5 rounded-lg border-t-4 border-blue-600">
                     <h4 class="font-bold text-lg mb-1">Siemens</h4>
                     <p class="text-xs text-slate-400 mb-3">Industrials</p>
-                    <p class="text-sm text-slate-600">ทำสถิติสูงสุดใหม่จากการได้รับประโยชน์จากกระแส Data Center และโครงสร้างพื้นฐาน AI</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">ทำ New High จากอุปสงค์ Data Center และโครงสร้างพื้นฐานเพื่อรองรับระบบ AI ทั่วโลก</p>
                 </div>
             </div>
         </section>
 
         <!-- Section 3: B-PREMIUM Deep Dive -->
         <section class="navy-bg text-white rounded-2xl p-8 shadow-2xl overflow-hidden relative">
-            <!-- Decorative circle -->
             <div class="absolute -top-20 -right-20 w-64 h-64 bg-[#B59410]/10 rounded-full"></div>
             
             <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6 text-[#B59410]">เจาะลึกกองทุน B-PREMIUM</h2>
+                    <h2 class="text-3xl font-bold mb-6 text-[#B59410]">เจาะลึกพอร์ต B-PREMIUM</h2>
                     <p class="text-slate-300 mb-8 leading-relaxed">
-                        กลุ่มหุ้นข้างต้น (Kering, Essilor, Hermes) ล้วนเป็นหุ้นที่อยู่ในพอร์ตของกองทุน <span class="text-white font-bold underline">B-PREMIUM</span> ซึ่งเน้นลงทุนในบริษัทที่มีอำนาจเหนือตลาดและมีแบรนด์ที่แข็งแกร่งระดับโลก
+                        พอร์ตการลงทุนปัจจุบันสะท้อนกลยุทธ์การกระจายตัวในกลุ่มสินค้าหรูหรา (High Luxury) และบริการระดับพรีเมียม (Premium Hospitality) โดยมุ่งเน้นบริษัทที่มีอำนาจการต่อรองราคาสูง
                     </p>
                     
-                    <!-- WTD Rebound Component -->
+                    <!-- Rebound Stat -->
                     <div class="space-y-4 mb-8">
                         <div class="flex justify-between items-end">
                             <span class="text-sm font-bold uppercase tracking-wider text-slate-400">Price Rebound from Low (WTD)</span>
@@ -145,54 +140,46 @@
                         <div class="w-full bg-slate-800 h-4 rounded-full p-1">
                             <div class="rebound-gradient h-full rounded-full" style="width: 72%"></div>
                         </div>
-                        <p class="text-xs text-slate-500 italic text-right">ข้อมูลเปรียบเทียบจากราคาต่ำสุดของสัปดาห์ปัจจุบัน</p>
+                        <p class="text-xs text-slate-500 italic text-right">ดีดตัวขึ้นจากจุดต่ำสุดของปี (NAV Rebound)</p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-slate-800/50 p-4 rounded-lg">
-                            <div class="text-xs text-slate-500 uppercase">Focus Sector</div>
-                            <div class="text-lg font-bold">Premium Brands</div>
+                            <div class="text-xs text-slate-500 uppercase">หลักทรัพย์ถือครองสูงสุด</div>
+                            <div class="text-lg font-bold text-[#B59410]">Hermes Sca</div>
                         </div>
                         <div class="bg-slate-800/50 p-4 rounded-lg">
-                            <div class="text-xs text-slate-500 uppercase">Top Contributor</div>
-                            <div class="text-lg font-bold text-[#B59410]">Luxury & AI Tech</div>
+                            <div class="text-xs text-slate-500 uppercase">กลุ่มธุรกิจมาแรง</div>
+                            <div class="text-lg font-bold text-[#B59410]">Premium Travel</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Top 10 Holdings Chart -->
+                <!-- UPDATED Top 10 Holdings Chart -->
                 <div class="bg-white rounded-xl p-6">
-                    <h3 class="text-navy-bg font-bold mb-4 text-center">B-PREMIUM Top 10 Holdings (Weights %)</h3>
+                    <h3 class="text-navy-bg font-bold mb-4 text-center">B-PREMIUM Top 10 Issuers (%)</h3>
+                    <p class="text-[10px] text-slate-400 text-center mb-4 uppercase tracking-tighter">As of 31/01/2026</p>
                     <div class="chart-container">
                         <canvas id="holdingsChart"></canvas>
                     </div>
-                    <div class="mt-4 text-[10px] text-slate-400 text-center uppercase tracking-tighter">
-                        Hermes • LVMH • EssilorLuxottica • Kering • Ferrari • Novo Nordisk • ASML • L'Oreal • Richemont • Siemens
+                    <div class="mt-4 text-[9px] text-slate-400 text-center uppercase leading-tight">
+                        Hermes • Hilton • LVMH • Visa • Marriott • Amex • Essilor • L'oreal • Galderma • Richemont
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Macro Summary -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- China Trade -->
-            <div class="premium-card p-6 rounded-xl">
-                <div class="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center mb-4">🌏</div>
-                <h4 class="font-bold mb-2">China Trade Signals</h4>
-                <p class="text-sm text-slate-600">การเจรจา EU-China เรื่องภาษี EVs และผลิตภัณฑ์นมส่งผลดีต่อกลุ่มส่งออกสินค้าหรูของฝรั่งเศสอย่างชัดเจน</p>
-            </div>
-            <!-- UK Gilts -->
-            <div class="premium-card p-6 rounded-xl">
-                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-4">🇬🇧</div>
-                <h4 class="font-bold mb-2">UK Gilts & Inflation</h4>
-                <p class="text-sm text-slate-600">ผลตอบแทนพันธบัตรอังกฤษทรงตัว ตลาดจับตาตัวเลขเงินเฟ้อ (CPI) สัปดาห์หน้าเพื่อประเมินการลดดอกเบี้ยของ BoE</p>
-            </div>
-            <!-- Swiss Volatility -->
-            <div class="premium-card p-6 rounded-xl">
-                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mb-4">🇨🇭</div>
-                <h4 class="font-bold mb-2">CHF Volatility</h4>
-                <p class="text-sm text-slate-600">ค่าเงินฟรังก์สวิสมีความผันผวนเพิ่มขึ้นจากความกังวลเรื่องประชามติในเดือน มิ.ย. ที่อาจกระทบความสัมพันธ์กับ EU</p>
-            </div>
+        <!-- Section 4: References (Works Cited) -->
+        <section class="premium-card p-8 rounded-xl bg-slate-50">
+            <h3 class="text-lg font-bold mb-4 border-b pb-2">รายการอ้างอิง (Works Cited)</h3>
+            <ul class="text-xs text-slate-500 space-y-2 list-decimal pl-4">
+                <li>Schroders Pops on Takeover Ady.pdf (Bloomberg First Word, Feb 13, 2026)</li>
+                <li>B-PREMIUM กองทุนเปิดบัวหลวง Premium Brands - Finnomena</li>
+                <li>Bualuang Premium Brands Equity Fund Factsheet - Bangkok Bank</li>
+                <li>Premium Brand strategy - Pictet Asset Management United Kingdom</li>
+                <li>Pictet Premium Brands Price & Information - Hargreaves Lansdown</li>
+                <li>Yahoo Finance UK: Pictet-Premium Brands HP USD Quote</li>
+            </ul>
         </section>
 
     </main>
@@ -201,24 +188,24 @@
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 navy-bg rounded flex items-center justify-center text-[#B59410] font-bold">B</div>
-                <span class="font-bold text-slate-800">B-PREMIUM INSIGHT</span>
+                <span class="font-bold text-slate-800 tracking-tight text-sm">B-PREMIUM MARKET ANALYSIS</span>
             </div>
-            <div class="text-sm text-slate-500">
-                ข้อมูลอ้างอิงจาก Finnomena และรายงานตลาดประจำวันที่ 13 ก.พ. 2026
+            <div class="text-[10px] text-slate-400">
+                ข้อมูลเพื่อประกอบการวิเคราะห์เท่านั้น มิใช่การเสนอขายหน่วยลงทุน • ข้อมูล ณ วันที่ 13 ก.พ. 2026
             </div>
         </div>
     </footer>
 
     <script>
-        // กราฟ Sector Performance
+        // กราฟ Sector Performance (อ้างอิงจากข้อมูล Bloomberg PDF)
         const ctxSector = document.getElementById('sectorChart').getContext('2d');
         new Chart(ctxSector, {
             type: 'bar',
             data: {
-                labels: ['Telecom', 'Food', 'Personal Care', 'Auto', 'Industrials', 'Tech', 'Basic Resources', 'Banks'],
+                labels: ['Telecom', 'Food', 'Personal Care', 'Automotive', 'Travel', 'Industrials', 'Tech', 'Basic Resources', 'Banks'],
                 datasets: [{
-                    label: 'Performance %',
-                    data: [1.8, 1.4, 0.9, 0.5, 0.3, -0.2, -0.8, -1.2],
+                    label: 'Return %',
+                    data: [1.9, 1.4, 1.2, 0.7, 0.5, -1.2, -1.7, -1.7, -1.8],
                     backgroundColor: function(context) {
                         const val = context.raw;
                         return val > 0 ? '#10B981' : '#EF4444';
@@ -234,49 +221,49 @@
                     legend: { display: false }
                 },
                 scales: {
-                    x: { grid: { display: false } },
-                    y: { grid: { display: false } }
+                    x: { grid: { display: false }, ticks: { font: { family: 'Sarabun', size: 10 } } },
+                    y: { grid: { display: false }, ticks: { font: { family: 'Sarabun', size: 10 } } }
                 }
             }
         });
 
-        // กราฟ B-PREMIUM Top 10 Holdings
+        // กราฟ B-PREMIUM Top 10 Holdings (อัปเดตตามรูปภาพ 31/01/2026)
         const ctxHoldings = document.getElementById('holdingsChart').getContext('2d');
         new Chart(ctxHoldings, {
             type: 'bar',
             data: {
-                labels: ['Hermes', 'LVMH', 'Essilor', 'Kering', 'Ferrari', 'Novo', 'ASML', 'L\'Oreal', 'Richemont', 'Siemens'],
+                labels: [
+                    'Hermes Sca', 'Hilton Inc', 'LVMH Se', 'Visa Inc', 
+                    'Marriott Inc', 'Amex Co', 'Essilor Sa', 'L\'Oreal Sa', 
+                    'Galderma Ag', 'Richemont Sa'
+                ],
                 datasets: [{
-                    label: 'Portfolio Weight (%)',
-                    data: [8.4, 7.9, 6.2, 5.8, 5.2, 4.9, 4.5, 4.1, 3.8, 3.5],
+                    label: 'Weight (%)',
+                    data: [4.89, 4.62, 4.57, 4.39, 4.35, 4.29, 4.25, 4.03, 3.80, 3.58],
                     backgroundColor: '#B59410',
                     hoverBackgroundColor: '#0F172A',
                     borderRadius: 4
                 }]
             },
             options: {
+                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false },
                     tooltip: {
-                        callbacks: {
-                            label: (context) => ` สัดส่วน: ${context.raw}%`
-                        }
+                        callbacks: { label: (c) => ` Weight: ${c.raw}%` }
                     }
                 },
                 scales: {
                     y: { 
-                        beginAtZero: true,
-                        max: 10,
-                        ticks: { stepSize: 2 }
+                        grid: { display: false },
+                        ticks: { font: { size: 9, family: 'Sarabun' } }
                     },
                     x: {
-                        ticks: {
-                            font: { size: 9 },
-                            maxRotation: 45,
-                            minRotation: 45
-                        }
+                        beginAtZero: true,
+                        max: 6,
+                        ticks: { stepSize: 1, font: { size: 9 } }
                     }
                 }
             }
